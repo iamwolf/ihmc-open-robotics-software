@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.vecmath.Point2d;
+import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 import us.ihmc.modelFileLoaders.SdfLoader.GeneralizedSDFRobotModel;
@@ -25,6 +26,7 @@ import us.ihmc.wholeBodyController.RobotContactPointParameters;
 
 public class ValkyrieContactPointParameters extends RobotContactPointParameters
 {
+   private boolean handContactPointsHaveBeenCreated = false;
    private final SideDependentList<ArrayList<Point2d>> footGroundContactPoints = new SideDependentList<>();
    private final SideDependentList<List<Point2d>> handContactPoints = new SideDependentList<>();
    private final SideDependentList<RigidBodyTransform> handContactPointTransforms = new SideDependentList<>();
@@ -36,10 +38,46 @@ public class ValkyrieContactPointParameters extends RobotContactPointParameters
       super(jointMap, footWidth, footLength, soleToAnkleFrameTransforms);
       this.jointMap = jointMap;
 
-      if (footContactPoints == null)
+      if (footContactPoints == null) {
          createDefaultFootContactPoints();
-      else
+         createHandKnobContactPoints();
+      } else
          createContactPoints(footContactPoints);
+   }
+
+   public void createHandKnobContactPoints()
+   {
+      if (handContactPointsHaveBeenCreated)
+      {
+         throw new RuntimeException("Contact points for the hands have already been created");
+      }
+      else
+      {
+         handContactPointsHaveBeenCreated = true;
+      }
+
+      SideDependentList<String> nameOfJointBeforeHands = jointMap.getNameOfJointBeforeHands();
+
+      for (RobotSide robotSide : RobotSide.values)
+      {
+         RigidBodyTransform handContactPointTransform = new RigidBodyTransform();
+
+         handContactPointTransform.setRotationRollAndZeroTranslation(robotSide.negateIfRightSide(Math.PI / 2.0));
+         handContactPointTransform.setTranslation(new Vector3d(0.0, robotSide.negateIfRightSide(0.41), robotSide.negateIfRightSide(0.0)));
+         handContactPointTransforms.put(robotSide, handContactPointTransform);
+         handContactPoints.put(robotSide, new ArrayList<Point2d>());
+         handContactPoints.get(robotSide).add(new Point2d());
+
+         for (Point2d point : handContactPoints.get(robotSide))
+         {
+            Point3d point3d = new Point3d(point.getX(), point.getY(), 0.0);
+
+            handContactPointTransforms.get(robotSide).transform(point3d);
+            addSimulationContactPoint(nameOfJointBeforeHands.get(robotSide), point3d);
+         }
+      }
+
+      contactableBodiesFactory.addHandContactParameters(nameOfJointBeforeHands, handContactPoints, handContactPointTransforms);
    }
 
    private void checkJointChildren(SDFJointHolder joint)

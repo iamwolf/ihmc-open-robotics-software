@@ -68,9 +68,9 @@ public class ValkyrieRosControlController extends IHMCWholeRobotControlJavaBridg
          "leftShoulderPitch", "leftShoulderRoll", "leftShoulderYaw", "leftElbowPitch", "rightShoulderPitch", "rightShoulderRoll", "rightShoulderYaw",
          "rightElbowPitch" };
 
-   private static final String[] positionControlledJoints = { "lowerNeckPitch", "neckYaw", "upperNeckPitch",
-         "rightForearmYaw", "rightWristRoll", "rightWristPitch",
-         "leftForearmYaw", "leftWristRoll", "leftWristPitch"
+   private static final String[] positionControlledJoints = { "lowerNeckPitch", "neckYaw", "upperNeckPitch"//,
+         //"rightForearmYaw", "rightWristRoll", "rightWristPitch",
+         //"leftForearmYaw", "leftWristRoll", "leftWristPitch"
    };
 
    public static final boolean USE_YOVARIABLE_DESIREDS = true;
@@ -129,7 +129,7 @@ public class ValkyrieRosControlController extends IHMCWholeRobotControlJavaBridg
 
       SideDependentList<String> feetContactSensorNames = sensorInformation.getFeetContactSensorNames();
       SideDependentList<String> feetForceSensorNames = sensorInformation.getFeetForceSensorNames();
-      SideDependentList<String> wristForceSensorNames = sensorInformation.getWristForceSensorNames();
+      SideDependentList<String> wristForceSensorNames = sensorInformation.getWristForceSensorNames(); // wxm asks No F/T no contactable body?
       MomentumBasedControllerFactory controllerFactory = new MomentumBasedControllerFactory(contactableBodiesFactory, feetForceSensorNames,
             feetContactSensorNames, wristForceSensorNames, walkingControllerParamaters, armControllerParamaters, capturePointPlannerParameters, initialBehavior);
       controllerFactory.setICPOptimizationControllerParameters(icpOptimizationParameters);

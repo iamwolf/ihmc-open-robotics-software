@@ -153,7 +153,7 @@ public class HandControlModule
 
       RigidBody elevator = fullRobotModel.getElevator();
       String[] positionControlledJointNames = armControlParameters.getPositionControlledJointNames(robotSide);
-      isAtLeastOneJointPositionControlled = positionControlledJointNames != null && positionControlledJointNames.length > 0;
+      isAtLeastOneJointPositionControlled = false; //positionControlledJointNames != null && positionControlledJointNames.length > 0;
 
       OneDoFJoint[] positionControlledJoints;
       if (isAtLeastOneJointPositionControlled)

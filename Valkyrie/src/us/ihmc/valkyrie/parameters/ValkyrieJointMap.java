@@ -141,13 +141,14 @@ public class ValkyrieJointMap implements DRCRobotJointMap
          jointRoles.put(neckJointString, JointRole.NECK);
       }
 
-      contactPointParameters = new ValkyrieContactPointParameters(this, simulationContactPoints);
-
       for (RobotSide robtSide : RobotSide.values)
       {
          nameOfJointsBeforeThighs.put(robtSide, legJointStrings.get(robtSide).get(LegJointName.HIP_PITCH));
-         nameOfJointsBeforeHands.put(robtSide, armJointStrings.get(robtSide).get(ArmJointName.FIRST_WRIST_PITCH));
+//         nameOfJointsBeforeHands.put(robtSide, armJointStrings.get(robtSide).get(ArmJointName.FIRST_WRIST_PITCH));
+         nameOfJointsBeforeHands.put(robtSide, armJointStrings.get(robtSide).get(ArmJointName.ELBOW_PITCH));
       }
+      
+      contactPointParameters = new ValkyrieContactPointParameters(this, simulationContactPoints);
 
       jointNamesBeforeFeet[0] = getJointBeforeFootName(RobotSide.LEFT);
       jointNamesBeforeFeet[1] = getJointBeforeFootName(RobotSide.RIGHT);

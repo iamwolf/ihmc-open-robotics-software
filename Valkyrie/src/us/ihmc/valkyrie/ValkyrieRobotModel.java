@@ -289,10 +289,12 @@ public class ValkyrieRobotModel implements DRCRobotModel, SDFDescriptionMutator
          Vector3f centerOfHandToWristTranslation = new Vector3f();
          float[] angles = new float[3];
 
-         centerOfHandToWristTranslation = new Vector3f(0f, (float) robotSide.negateIfLeftSide(0.015f), -0.06f);
+//         centerOfHandToWristTranslation = new Vector3f(0f, (float) robotSide.negateIfLeftSide(0.015f), -0.06f);
+//         centerOfHandToWristTranslation = new Vector3f(0f, 0f, -0.41f); // for stump balancing
+         centerOfHandToWristTranslation = new Vector3f(0f, -0.41f, 0f); // for stump balancing
          angles[0] = (float) robotSide.negateIfLeftSide(Math.toRadians(90));
          angles[1] = 0.0f;
-         angles[2] = (float) robotSide.negateIfLeftSide(Math.toRadians(90));
+         angles[2] = 0.0f; //(float) robotSide.negateIfLeftSide(Math.toRadians(90));
          //
          Quaternion centerOfHandToWristRotation = new Quaternion(angles);
          offsetHandFromWrist.set(robotSide, new Transform(centerOfHandToWristTranslation, centerOfHandToWristRotation));

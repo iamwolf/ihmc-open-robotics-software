@@ -95,7 +95,7 @@ public class WrenchMatrixCalculator
       desiredCoPWeightMatrix = new DenseMatrix64F(copTaskSize, copTaskSize);   
       copRateWeightMatrix = new DenseMatrix64F(copTaskSize, copTaskSize);      
       
-
+System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>?//////////////////// nContactableBodies is " + nContactableBodies);
       if (contactablePlaneBodies.size() > nContactableBodies)
          throw new RuntimeException("Unexpected number of contactable plane bodies: " + contactablePlaneBodies.size());
 

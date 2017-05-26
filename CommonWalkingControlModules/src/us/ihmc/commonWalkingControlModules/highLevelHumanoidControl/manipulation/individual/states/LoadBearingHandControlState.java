@@ -59,11 +59,13 @@ public class LoadBearingHandControlState extends HandControlState
       handFrame = endEffector.getBodyFixedFrame();
 
       SideDependentList<ContactablePlaneBody> contactableHands = momentumBasedController.getContactableHands();
+      System.out.println(">>>>> Do we have contactable hands?");
       if (contactableHands != null)
       {
          handPalm = contactableHands.get(robotSide);
          contactNormal = new FrameVector();
          contactNormal.setToNaN();
+         System.out.println(">>>>>>>>>>> YES!!!");
          momentumBasedController.setPlaneContactStateFree(handPalm);
       }
       else

@@ -78,6 +78,7 @@ public class ValkyrieContactPointParameters extends RobotContactPointParameters
       }
 
       contactableBodiesFactory.addHandContactParameters(nameOfJointBeforeHands, handContactPoints, handContactPointTransforms);
+      System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>> OKAY, we now set up our hand contact points");
    }
 
    private void checkJointChildren(SDFJointHolder joint)

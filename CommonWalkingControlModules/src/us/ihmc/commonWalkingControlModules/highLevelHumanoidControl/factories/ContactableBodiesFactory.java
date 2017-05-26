@@ -60,6 +60,7 @@ public class ContactableBodiesFactory
 
          RigidBody hand = jointBeforeHandArray[0].getSuccessor();
          String name = robotSide.getCamelCaseNameForStartOfExpression() + "HandContact";
+         System.out.println(">>>>>>>>>>>>>>>>>>>>>>> OKAY, this is our hand contact: " + name);
          ListOfPointsContactablePlaneBody handContactableBody = createListOfPointsContactablePlaneBody(name, hand, handContactPointTransforms.get(robotSide),
                handContactPoints.get(robotSide));
          handContactableBodies.put(robotSide, handContactableBody);

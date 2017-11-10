@@ -743,7 +743,13 @@ public class ValkyrieWalkingControllerParameters extends WalkingControllerParame
    @Override
    public boolean doPrepareManipulationForLocomotion()
    {
-      return true;
+      return false;
+   }
+   
+   @Override
+   public boolean allowUpperBodyMotionDuringLocomotion()
+   {
+	   return true;
    }
 
    @Override

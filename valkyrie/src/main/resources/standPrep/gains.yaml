@@ -130,10 +130,6 @@ leftIndexFingerMotorPitch1:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-leftIndexFingerPitch1:
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0         
 leftIndexFingerPitch2:         
     kp: 0.0
     kd: 0.0
@@ -146,10 +142,6 @@ leftMiddleFingerMotorPitch1:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-leftMiddleFingerPitch1:        
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
 leftMiddleFingerPitch2:        
     kp: 0.0
     kd: 0.0
@@ -162,10 +154,6 @@ leftPinkyMotorPitch1:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-leftPinkyPitch1:          
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
 leftPinkyPitch2:          
     kp: 0.0
     kd: 0.0
@@ -178,10 +166,6 @@ leftThumbMotorRoll:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-leftThumbRoll:         
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
 leftThumbMotorPitch1:
     kp: 0.0
     kd: 0.0
@@ -190,23 +174,11 @@ leftThumbMotorPitch2:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-leftThumbPitch1:          
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
-leftThumbPitch2:          
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
 leftThumbPitch3:                   
     kp: 0.0
     kd: 0.0
     ki: 0.0
 rightIndexFingerMotorPitch1:
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0         
-rightIndexFingerPitch1:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
@@ -222,10 +194,6 @@ rightMiddleFingerMotorPitch1:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-rightMiddleFingerPitch1:        
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
 rightMiddleFingerPitch2:        
     kp: 0.0
     kd: 0.0
@@ -238,10 +206,6 @@ rightPinkyMotorPitch1:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-rightPinkyPitch1:          
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
 rightPinkyPitch2:          
     kp: 0.0
     kd: 0.0
@@ -254,10 +218,6 @@ rightThumbMotorRoll:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-rightThumbRoll:         
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
 rightThumbMotorPitch1:
     kp: 0.0
     kd: 0.0
@@ -266,14 +226,6 @@ rightThumbMotorPitch2:
     kp: 0.0
     kd: 0.0
     ki: 0.0         
-rightThumbPitch1:          
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
-rightThumbPitch2:          
-    kp: 0.0
-    kd: 0.0
-    ki: 0.0
 rightThumbPitch3:                   
     kp: 0.0
     kd: 0.0

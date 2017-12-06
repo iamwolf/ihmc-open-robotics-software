@@ -6,19 +6,19 @@ import static us.ihmc.sensorProcessing.sensorProcessors.SensorProcessing.SensorT
 import static us.ihmc.sensorProcessing.sensorProcessors.SensorProcessing.SensorType.JOINT_POSITION;
 import static us.ihmc.sensorProcessing.sensorProcessors.SensorProcessing.SensorType.JOINT_TAU;
 import static us.ihmc.sensorProcessing.sensorProcessors.SensorProcessing.SensorType.JOINT_VELOCITY;
-import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.IndexFingerPitch1;
+import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.IndexFingerMotorPitch1;
 import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.IndexFingerPitch2;
 import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.IndexFingerPitch3;
-import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.MiddleFingerPitch1;
+import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.MiddleFingerMotorPitch1;
 import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.MiddleFingerPitch2;
 import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.MiddleFingerPitch3;
-import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.PinkyPitch1;
+import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.PinkyMotorPitch1;
 import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.PinkyPitch2;
 import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.PinkyPitch3;
-import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.ThumbPitch1;
-import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.ThumbPitch2;
+import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.ThumbMotorPitch1;
+import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.ThumbMotorPitch2;
 import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.ThumbPitch3;
-import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.ThumbRoll;
+import static us.ihmc.valkyrie.fingers.ValkyrieHandJointName.ThumbMotorRoll;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -264,13 +264,13 @@ public class ValkyrieStateEstimatorParameters extends StateEstimatorParameters
             
             boolean isLeftSide = robotSide == RobotSide.LEFT;
             
-            scales.get(ThumbRoll         ).set(isLeftSide ? -1.00 : 1.00);
-            scales.get(ThumbPitch1       ).set(isLeftSide ? -1.00 : 1.00);
-            scales.get(IndexFingerPitch1 ).set(isLeftSide ? -0.75 : 0.60);
-            scales.get(MiddleFingerPitch1).set(isLeftSide ? -0.75 : 0.75);
-            scales.get(PinkyPitch1       ).set(isLeftSide ? -0.70 : 0.60);
+            scales.get(ThumbMotorRoll         ).set(isLeftSide ? -1.00 : 1.00);
+            scales.get(ThumbMotorPitch1       ).set(isLeftSide ? -1.00 : 1.00);
+            scales.get(IndexFingerMotorPitch1 ).set(isLeftSide ? -0.75 : 0.60);
+            scales.get(MiddleFingerMotorPitch1).set(isLeftSide ? -0.75 : 0.75);
+            scales.get(PinkyMotorPitch1       ).set(isLeftSide ? -0.70 : 0.60);
             
-            scales.get(ThumbPitch2       ).set(isLeftSide ?-0.50 : 0.40);
+            scales.get(ThumbMotorPitch2       ).set(isLeftSide ?-0.50 : 0.40);
             scales.get(IndexFingerPitch2 ).set(isLeftSide ? 0.62 : 0.70);
             scales.get(MiddleFingerPitch2).set(isLeftSide ? 0.42 : 0.60);
             scales.get(PinkyPitch2       ).set(isLeftSide ? 0.50 : 0.65);
@@ -280,13 +280,13 @@ public class ValkyrieStateEstimatorParameters extends StateEstimatorParameters
             scales.get(MiddleFingerPitch3).set(isLeftSide ? 0.30 : 0.30);
             scales.get(PinkyPitch3       ).set(isLeftSide ? 0.30 : 0.30);
             
-            biases.get(ThumbRoll         ).set(1.57); // TODO at the same I added these, the thumb roll did not work.
-            biases.get(ThumbPitch1       ).set(isLeftSide ?-0.20 :-1.10);
-            biases.get(IndexFingerPitch1 ).set(isLeftSide ? 0.82 :-0.60);
-            biases.get(MiddleFingerPitch1).set(isLeftSide ? 1.30 : 0.00);
-            biases.get(PinkyPitch1       ).set(isLeftSide ? 1.40 :-0.50);
+            biases.get(ThumbMotorRoll         ).set(1.57); // TODO at the same I added these, the thumb roll did not work.
+            biases.get(ThumbMotorPitch1       ).set(isLeftSide ?-0.20 :-1.10);
+            biases.get(IndexFingerMotorPitch1 ).set(isLeftSide ? 0.82 :-0.60);
+            biases.get(MiddleFingerMotorPitch1).set(isLeftSide ? 1.30 : 0.00);
+            biases.get(PinkyMotorPitch1       ).set(isLeftSide ? 1.40 :-0.50);
             
-            biases.get(ThumbPitch2       ).set(isLeftSide ? 0.00 : 0.40);
+            biases.get(ThumbMotorPitch2       ).set(isLeftSide ? 0.00 : 0.40);
             biases.get(IndexFingerPitch2 ).set(isLeftSide ?-0.60 : 0.40);
             biases.get(MiddleFingerPitch2).set(isLeftSide ?-0.80 :-0.20);
             biases.get(PinkyPitch2       ).set(isLeftSide ?-0.63 : 0.30);
@@ -301,7 +301,7 @@ public class ValkyrieStateEstimatorParameters extends StateEstimatorParameters
       for (RobotSide robotSide : RobotSide.values)
       {
          { // Doing the thumb separately
-            ValkyrieHandJointName[] thumbBaseJoints = {ThumbRoll, ThumbPitch1, ThumbPitch2};
+            ValkyrieHandJointName[] thumbBaseJoints = {ThumbMotorRoll, ThumbMotorPitch1, ThumbMotorPitch2};
             for (ValkyrieHandJointName joint : thumbBaseJoints)
             {
                YoDouble scale = sideDependentScales.get(robotSide).get(joint);
@@ -313,13 +313,13 @@ public class ValkyrieStateEstimatorParameters extends StateEstimatorParameters
                ValkyrieHandJointName slaveJoint = ThumbPitch3;
                YoDouble scale = sideDependentScales.get(robotSide).get(slaveJoint);
                YoDouble bias = sideDependentBiases.get(robotSide).get(slaveJoint);
-               String masterJointName = ThumbPitch2.getCamelCaseJointName(robotSide);
+               String masterJointName = ThumbMotorPitch2.getCamelCaseJointName(robotSide);
                String slaveJointName = slaveJoint.getCamelCaseJointName(robotSide);
                sensorProcessing.computeJointPositionUsingCoupling(masterJointName, slaveJointName, scale, bias, false);
             }
          }
 
-         ValkyrieHandJointName[] masterJoints = {IndexFingerPitch1, MiddleFingerPitch1, PinkyPitch1};
+         ValkyrieHandJointName[] masterJoints = {IndexFingerMotorPitch1, MiddleFingerMotorPitch1, PinkyMotorPitch1};
          ValkyrieHandJointName[] slaveJoints2 = {IndexFingerPitch2, MiddleFingerPitch2, PinkyPitch2};
          ValkyrieHandJointName[] slaveJoints3 = {IndexFingerPitch3, MiddleFingerPitch3, PinkyPitch3};
 

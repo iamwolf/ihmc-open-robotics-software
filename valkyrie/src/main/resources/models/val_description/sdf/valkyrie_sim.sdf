@@ -1614,7 +1614,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='leftIndexFingerPitch1' type='revolute'>
+    <joint name='leftIndexFingerMotorPitch1' type='revolute'>
       <child>leftIndexFingerPitch1Link</child>
       <parent>leftPalm</parent>
       <axis>
@@ -1809,7 +1809,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='leftMiddleFingerPitch1' type='revolute'>
+    <joint name='leftMiddleFingerMotorPitch1' type='revolute'>
       <child>leftMiddleFingerPitch1Link</child>
       <parent>leftPalm</parent>
       <axis>
@@ -2004,7 +2004,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='leftPinkyPitch1' type='revolute'>
+    <joint name='leftPinkyMotorPitch1' type='revolute'>
       <child>leftPinkyPitch1Link</child>
       <parent>leftPalm</parent>
       <axis>
@@ -2199,7 +2199,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='leftThumbRoll' type='revolute'>
+    <joint name='leftThumbMotorRoll' type='revolute'>
       <child>leftThumbRollLink</child>
       <parent>leftPalm</parent>
       <axis>
@@ -2264,7 +2264,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='leftThumbPitch1' type='revolute'>
+    <joint name='leftThumbMotorPitch1' type='revolute'>
       <child>leftThumbPitch1Link</child>
       <parent>leftThumbRollLink</parent>
       <axis>
@@ -2329,7 +2329,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='leftThumbPitch2' type='revolute'>
+    <joint name='leftThumbMotorPitch2' type='revolute'>
       <child>leftThumbPitch2Link</child>
       <parent>leftThumbPitch1Link</parent>
       <axis>
@@ -3319,7 +3319,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='rightIndexFingerPitch1' type='revolute'>
+    <joint name='rightIndexFingerMotorPitch1' type='revolute'>
       <child>rightIndexFingerPitch1Link</child>
       <parent>rightPalm</parent>
       <axis>
@@ -3514,7 +3514,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='rightMiddleFingerPitch1' type='revolute'>
+    <joint name='rightMiddleFingerMotorPitch1' type='revolute'>
       <child>rightMiddleFingerPitch1Link</child>
       <parent>rightPalm</parent>
       <axis>
@@ -3709,7 +3709,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='rightPinkyPitch1' type='revolute'>
+    <joint name='rightPinkyMotorPitch1' type='revolute'>
       <child>rightPinkyPitch1Link</child>
       <parent>rightPalm</parent>
       <axis>
@@ -3904,7 +3904,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='rightThumbRoll' type='revolute'>
+    <joint name='rightThumbMotorRoll' type='revolute'>
       <child>rightThumbRollLink</child>
       <parent>rightPalm</parent>
       <axis>
@@ -3969,7 +3969,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='rightThumbPitch1' type='revolute'>
+    <joint name='rightThumbMotorPitch1' type='revolute'>
       <child>rightThumbPitch1Link</child>
       <parent>rightThumbRollLink</parent>
       <axis>
@@ -4034,7 +4034,7 @@
         </geometry>
       </visual>
     </link>
-    <joint name='rightThumbPitch2' type='revolute'>
+    <joint name='rightThumbMotorPitch2' type='revolute'>
       <child>rightThumbPitch2Link</child>
       <parent>rightThumbPitch1Link</parent>
       <axis>

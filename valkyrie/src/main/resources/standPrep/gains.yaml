@@ -126,6 +126,10 @@ rightWristPitch:
     kp: 20.0
     kd: 1.0
     ki: 0.0
+leftIndexFingerMotorPitch1:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
 leftIndexFingerPitch1:
     kp: 0.0
     kd: 0.0
@@ -138,6 +142,10 @@ leftIndexFingerPitch3:
     kp: 0.0
     kd: 0.0
     ki: 0.0
+leftMiddleFingerMotorPitch1:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
 leftMiddleFingerPitch1:        
     kp: 0.0
     kd: 0.0
@@ -150,6 +158,10 @@ leftMiddleFingerPitch3:
     kp: 0.0
     kd: 0.0
     ki: 0.0
+leftPinkyMotorPitch1:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
 leftPinkyPitch1:          
     kp: 0.0
     kd: 0.0
@@ -162,10 +174,22 @@ leftPinkyPitch3:
     kp: 0.0
     kd: 0.0
     ki: 0.0
+leftThumbMotorRoll:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
 leftThumbRoll:         
     kp: 0.0
     kd: 0.0
     ki: 0.0
+leftThumbMotorPitch1:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0
+leftThumbMotorPitch2:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
 leftThumbPitch1:          
     kp: 0.0
     kd: 0.0
@@ -178,55 +202,79 @@ leftThumbPitch3:
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightIndexFingerPitch1:        
+rightIndexFingerMotorPitch1:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
+rightIndexFingerPitch1:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
+rightIndexFingerPitch2:         
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightIndexFingerPitch2:        
+rightIndexFingerPitch3:         
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightIndexFingerPitch3:        
+rightMiddleFingerMotorPitch1:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
+rightMiddleFingerPitch1:        
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightMiddleFingerPitch1:      
+rightMiddleFingerPitch2:        
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightMiddleFingerPitch2:      
+rightMiddleFingerPitch3:        
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightMiddleFingerPitch3:      
+rightPinkyMotorPitch1:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
+rightPinkyPitch1:          
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightPinkyPitch1:        
+rightPinkyPitch2:          
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightPinkyPitch2:               
+rightPinkyPitch3:          
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightPinkyPitch3:               
+rightThumbMotorRoll:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
+rightThumbRoll:         
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightThumbRoll:               
+rightThumbMotorPitch1:
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightThumbPitch1:               
+rightThumbMotorPitch2:
+    kp: 0.0
+    kd: 0.0
+    ki: 0.0         
+rightThumbPitch1:          
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightThumbPitch2:               
+rightThumbPitch2:          
     kp: 0.0
     kd: 0.0
     ki: 0.0
-rightThumbPitch3:
+rightThumbPitch3:                   
     kp: 0.0
     kd: 0.0
     ki: 0.0

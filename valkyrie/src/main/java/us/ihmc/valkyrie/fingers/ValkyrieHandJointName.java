@@ -10,24 +10,30 @@ import us.ihmc.simulationconstructionset.PinJoint;
 
 public enum ValkyrieHandJointName implements HandJointName
 {
+   ThumbMotorRoll,
    ThumbRoll,
+   ThumbMotorPitch1,
+   ThumbMotorPitch2,
    ThumbPitch1,
    ThumbPitch2,
    ThumbPitch3,
+   IndexFingerMotorPitch1,
    IndexFingerPitch1,
    IndexFingerPitch2,
    IndexFingerPitch3,
+   MiddleFingerMotorPitch1,
    MiddleFingerPitch1,
    MiddleFingerPitch2,
    MiddleFingerPitch3,
+   PinkyMotorPitch1,
    PinkyPitch1,
    PinkyPitch2,
    PinkyPitch3;
 
    public static final ValkyrieHandJointName[] values = ValkyrieHandJointName.values();
-   public static final ValkyrieHandJointName[] controllableJoints = {ThumbRoll, ThumbPitch1, ThumbPitch2, IndexFingerPitch1, MiddleFingerPitch1, PinkyPitch1};
-   public static final ValkyrieHandJointName[] passiveJoints = {ThumbPitch3, IndexFingerPitch2, IndexFingerPitch3, MiddleFingerPitch2, MiddleFingerPitch3,
-         PinkyPitch2, PinkyPitch3};
+   public static final ValkyrieHandJointName[] controllableJoints = {ThumbMotorRoll, ThumbMotorPitch1, ThumbMotorPitch2, IndexFingerMotorPitch1, MiddleFingerMotorPitch1, PinkyMotorPitch1};
+   public static final ValkyrieHandJointName[] passiveJoints = {ThumbPitch1, ThumbPitch2, ThumbPitch3, IndexFingerPitch1, IndexFingerPitch2, IndexFingerPitch3, MiddleFingerPitch1, MiddleFingerPitch2, MiddleFingerPitch3,
+         PinkyPitch1, PinkyPitch2, PinkyPitch3};
 
    @Override
    public String getJointName(RobotSide robotSide)
@@ -55,19 +61,25 @@ public enum ValkyrieHandJointName implements HandJointName
    {
       switch (this)
       {
+      case ThumbMotorRoll:
+      case ThumbMotorPitch1:
+      case ThumbMotorPitch2:
       case ThumbRoll:
       case ThumbPitch1:
       case ThumbPitch2:
       case ThumbPitch3:
          return FingerName.THUMB;
+      case IndexFingerMotorPitch1:
       case IndexFingerPitch1:
       case IndexFingerPitch2:
       case IndexFingerPitch3:
          return FingerName.INDEX;
+      case MiddleFingerMotorPitch1:
       case MiddleFingerPitch1:
       case MiddleFingerPitch2:
       case MiddleFingerPitch3:
          return FingerName.MIDDLE;
+      case PinkyMotorPitch1:
       case PinkyPitch1:
       case PinkyPitch2:
       case PinkyPitch3:

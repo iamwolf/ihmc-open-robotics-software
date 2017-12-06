@@ -64,8 +64,8 @@ public class ValkyrieRosControlController extends IHMCWholeRobotControlJavaBridg
          "rightShoulderPitch", "rightShoulderRoll", "rightShoulderYaw", "rightElbowPitch",
          "leftForearmYaw", "leftWristRoll", "leftWristPitch", 
          "rightForearmYaw", "rightWristRoll", "rightWristPitch",
-         "leftIndexFingerPitch1", "leftMiddleFingerPitch1", "leftPinkyPitch1", "leftThumbRoll", "leftThumbPitch1", "leftThumbPitch2",
-         "rightIndexFingerPitch1", "rightMiddleFingerPitch1", "rightPinkyPitch1", "rightThumbRoll", "rightThumbPitch1", "rightThumbPitch2"
+         "leftIndexFingerMotorPitch1", "leftMiddleFingerMotorPitch1", "leftPinkyMotorPitch1", "leftThumbMotorRoll", "leftThumbMotorPitch1", "leftThumbMotorPitch2",
+         "rightIndexFingerMotorPitch1", "rightMiddleFingerMotorPitch1", "rightPinkyMotorPitch1", "rightThumbMotorRoll", "rightThumbMotorPitch1", "rightThumbMotorPitch2"
          };
 
    private static final String[] torqueControlledJoints = {
@@ -76,8 +76,8 @@ public class ValkyrieRosControlController extends IHMCWholeRobotControlJavaBridg
          "rightShoulderPitch", "rightShoulderRoll", "rightShoulderYaw", "rightElbowPitch",
          "leftForearmYaw", "leftWristRoll", "leftWristPitch",
          "rightForearmYaw", "rightWristRoll", "rightWristPitch",
-         "leftIndexFingerPitch1", "leftMiddleFingerPitch1", "leftPinkyPitch1", "leftThumbRoll", "leftThumbPitch1", "leftThumbPitch2",
-         "rightIndexFingerPitch1", "rightMiddleFingerPitch1", "rightPinkyPitch1", "rightThumbRoll", "rightThumbPitch1", "rightThumbPitch2"
+         "leftIndexFingerMotorPitch1", "leftMiddleFingerMotorPitch1", "leftPinkyMotorPitch1", "leftThumbMotorRoll", "leftThumbMotorPitch1", "leftThumbMotorPitch2",
+         "rightIndexFingerMotorPitch1", "rightMiddleFingerMotorPitch1", "rightPinkyMotorPitch1", "rightThumbMotorRoll", "rightThumbMotorPitch1", "rightThumbPitch2"
          };
 
    private static final String[] positionControlledJoints = {

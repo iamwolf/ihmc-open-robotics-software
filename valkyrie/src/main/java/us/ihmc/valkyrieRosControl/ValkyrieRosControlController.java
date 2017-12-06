@@ -76,7 +76,7 @@ public class ValkyrieRosControlController extends IHMCWholeRobotControlJavaBridg
          "rightShoulderPitch", "rightShoulderRoll", "rightShoulderYaw", "rightElbowPitch",
          "leftForearmYaw", "leftWristRoll", "leftWristPitch",
          "rightForearmYaw", "rightWristRoll", "rightWristPitch",
-         "leftIndexFingerMotorPitch1", "leftMiddleFingerMotorPitch1", "leftPinkyMotorPitch1", "leftThumbMotorRoll", "leftThumbMotorPitch1", "leftThumbMotorMotorPitch2",
+         "leftIndexFingerMotorPitch1", "leftMiddleFingerMotorPitch1", "leftPinkyMotorPitch1", "leftThumbMotorRoll", "leftThumbMotorPitch1", "leftThumbMotorPitch2",
          "rightIndexFingerMotorPitch1", "rightMiddleFingerMotorPitch1", "rightPinkyMotorPitch1", "rightThumbMotorRoll", "rightThumbMotorPitch1", "rightThumbMotorPitch2"
          };
 
